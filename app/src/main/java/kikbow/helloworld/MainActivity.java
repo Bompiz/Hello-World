@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        count++;
+                        if (count==0)
+                            count = 2;
+                        else
+                            count*=2;
 
                         textview.setText("Olá Mundo!" + count);
                     }
